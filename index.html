@@ -660,12 +660,27 @@
     width: 100%;
 }
 
+
+@media only screen and (max-width: 600px) {
+    .giftbox .img {
+        position: absolute;
+        width: 124px;
+        bottom: 65px;
+        left: -15px;
+        z-index: 100;
+    }
+    .textLetter .contentLetter{
+        padding: 0;
+        font-size: 15px;
+    }
+}   
+
     </style>
 </head>
 
 <body>
 
-    <svg style="display: none;height: 100;" id="theSvg" viewBox="-120 -30 240 180" enable-background="new 0 0 174 148"
+    <svg style="display: none;height: 100vh;" id="theSvg" viewBox="-120 -30 240 180" enable-background="new 0 0 174 148"
         xml:space="preserve">
         <defs>
             <filter id="f" filterUnits="userSpaceOnUse" x="-120" y="-30" width="120%" height="120%">
@@ -934,8 +949,9 @@
                                  c3.371,3.385,7.075,6.243,11.008,8.573c4.885,2.894,10.125,4.964,15.515,6.228C354.624,212.802,357.947,181.899,370.903,162.627z" />
         </svg>
         <p id="text-click" style=" display: none;   font-family: fantasy;
-        color: indianred;
+        color: #EE0000;
         font-size: 50px;
+        text-align: center;
         top: 80%;">Bé Heo kích dô bông hoa nèo !</p>
     </div>
 
@@ -1131,7 +1147,7 @@
         // chữ của thư bạn muốn gửi
         let indexTextContent = 0;
         let textLetterContent = document.querySelector('.contentLetter');
-        const textLetterP = "Hôm nay là ngày 20/10. Anh muốn dành cho em những lời chúc chân thành và ấm áp nhất từ trái tim. Anh chúc em luôn khỏe mạnh, hạnh phúc và tràn đầy năng lượng mỗi ngày. Anh hy vọng rằng nụ cười của em sẽ mãi rạng rỡ, và sẽ mãi mãi bên anh, chia sẻ mọi niềm vui và vượt qua mọi khó khăn. Cảm ơn em vì đã đến bên anh, làm cho cuộc sống của anh thêm ý nghĩa và đầy màu sắc. Anh yêu em quá trời quá đất luôn é. Mãi mãi bên nhau em nhé! 💗💗Love you 💗💗";
+        const textLetterP = "Hôm nay là ngày 20/10. Anh muốn dành cho em những lời chúc chân thành và ấm áp nhất từ trái tim. Anh chúc em luôn khỏe mạnh, hạnh phúc và tràn đầy năng lượng mỗi ngày. Anh hy vọng rằng nụ cười của em sẽ mãi rạng rỡ, và sẽ mãi mãi bên anh, chia sẻ mọi niềm vui và vượt qua mọi khó khăn. Cảm ơn em vì đã đến bên anh, làm cho cuộc sống của anh thêm ý nghĩa và đầy màu sắc. Anh yêu em quá trời quá đất luôn é. Mình mãi mãi bên nhau em nhé! 💗💗Love you 💗💗";
         let timoutTextLetterContent;
         function textCharLetterContent() {
             if (indexTextContent < textLetterP.length) {
